@@ -53,6 +53,8 @@ const securityHeaders = [
 ]
 
 module.exports = withBundleAnalyzer({
+  assetPrefix: '/home', //加前缀
+  basePath: '/home', //node
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   eslint: {

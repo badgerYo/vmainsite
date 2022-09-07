@@ -55,3 +55,21 @@ start 会从 .next 文件夹部署服务
 ---
 
 远端 Linux 直接 screen 跑起来。
+
+---
+
+PM2 命令行运行 npm 命令
+
+```shell
+pm2 start npm --watch --name <taskname> -- run <scriptname>
+```
+
+> 注意 run 前后有空格
+
+---
+
+目前已知 linux 不挂断程序的方式
+
+1. nohup
+2. screen
+3. pm2 (JS 程序)

@@ -47,3 +47,11 @@ const defaultCommand = 'start'
 ```
 
 start 会从 .next 文件夹部署服务
+
+---
+
+远端 Linux 使用 Node 版本为 14.18.2 ，sharp 库依赖为 0.28.3 版本下载，其他 30+版本难以下载。。
+
+---
+
+远端 Linux 直接 screen 跑起来。

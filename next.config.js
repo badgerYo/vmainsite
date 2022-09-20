@@ -53,6 +53,10 @@ const securityHeaders = [
 ]
 
 module.exports = withBundleAnalyzer({
+  i18n: {
+    locales: ['zh-Hans'],
+    defaultLocale: 'zh-Hans',
+  },
   assetPrefix: '/main', //加前缀
   basePath: '/main', //node
   reactStrictMode: true,

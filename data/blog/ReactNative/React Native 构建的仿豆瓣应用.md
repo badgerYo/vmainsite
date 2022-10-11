@@ -38,15 +38,11 @@ github 地址 → [【瓣芽·Banya】](https://github.com/lexguy/Banya_ReactNat
 
 #### 4. 运行截图
 
-<!-- <img src="https://ae01.alicdn.com/kf/H7749d15f6dff4a51b50b422e4661fc7fb.jpg"  width="200"  height="400"/><img src="https://ae01.alicdn.com/kf/H2e4b4b7c325b44b991621d34a3726b9en.jpg"  width="200"  height="400"/><img src="https://ae01.alicdn.com/kf/H1b6289ac00784a979f9a015a015bf6f8W.jpg"  width="200"  height="400"/> -->
-
-<img src="https://pic.downk.cc/item/5eca95aac2a9a83be549daa9.png">
+<img src="https://pic.downk.cc/item/5eca95aac2a9a83be549daa9.png" />
 
 换肤蓝色之后：
 
-<img src="https://pic.downk.cc/item/5eca95aac2a9a83be549daaf.png">
-
-<!-- <img src="https://ae01.alicdn.com/kf/H181d02c558dc4edab4183d91b456f13fD.jpg"  width="200"  height="400"/><img src="https://ae01.alicdn.com/kf/H628fe112d3f84784939b90280701242dB.jpg"  width="200"  height="400"/><img src="https://ae01.alicdn.com/kf/He1bbe98af67c43d0b961c1d40455581df.jpg"  width="200"  height="400"/> -->
+<img src="https://pic.downk.cc/item/5eca95aac2a9a83be549daaf.png" />
 
 #### 5 .项目结构
 
@@ -57,7 +53,7 @@ github 地址 → [【瓣芽·Banya】](https://github.com/lexguy/Banya_ReactNat
 - util 　 网络请求等公共函数
 - views 　 screen 页面
 
-<img src="https://ae01.alicdn.com/kf/H3fd218b8e1a546928ccf3ff86116ae91l.png"  width="300"  height="600"/>
+<img src="https://ae01.alicdn.com/kf/H3fd218b8e1a546928ccf3ff86116ae91l.png"  width="300"  height="600" />
 
 以上是个人开源项目，任何问题欢迎交流，共同学习！
 

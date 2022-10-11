@@ -25,7 +25,7 @@ summary: ''
 
 具体参数类型如下：
 
-<img src="https://img.imgdb.cn/item/601265d43ffa7d37b3b6489c.jpg" width=700 />
+<img src="https://img.imgdb.cn/item/601265d43ffa7d37b3b6489c.jpg" width="700" />
 
 现在开始在代码中使用：
 
@@ -66,7 +66,7 @@ summary: ''
 
    现在来看看效果：
 
-   <img src="https://img.imgdb.cn/item/60126ef73ffa7d37b3bc6c89.jpg">
+   <img src="https://img.imgdb.cn/item/60126ef73ffa7d37b3bc6c89.jpg" />
 
    如果没有`Modal`层级，`zhanghsan`是应该在红色区域里面的。但是为什么加了`Modal`就在外面了？这时检查渲染结构，秘密就在这里：
 
@@ -104,7 +104,7 @@ summary: ''
 
 实例：
 
-<img src="https://img.imgdb.cn/item/601281633ffa7d37b3c8a5da.gif" width=400/>
+<img src="https://img.imgdb.cn/item/601281633ffa7d37b3c8a5da.gif" width="400"/>
 
 例子代码：
 

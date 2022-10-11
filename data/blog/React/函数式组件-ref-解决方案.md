@@ -21,7 +21,7 @@ summary: ''
 
 修改子组件`Counter`中的值， 达到重置`count`的目的：
 
-<img src="https://img.imgdb.cn/item/6007946f3ffa7d37b335f942.gif" width=300>
+<img src="https://img.imgdb.cn/item/6007946f3ffa7d37b335f942.gif" width="300"/>
 
 ```jsx
 export default function App() {
@@ -90,7 +90,7 @@ const MyCounter = React.forwardRef(Counter)
 
 重点是`useImperativeHandle`中定义了`resetCount`，以及使用`React.forward`获取 ref，在`App`组件中为`MyCounter`中定义`ref`属性，然后就可以在外部父组件中使用通过`ref`调用子组件的`resetCount`方法。
 
-<img src="https://img.imgdb.cn/item/600799b23ffa7d37b3388dc4.gif" width=300/>
+<img src="https://img.imgdb.cn/item/600799b23ffa7d37b3388dc4.gif" width="300"/>
 
 到这里，实际上已经达到了和`class`中`ref`对等的效果。
 
@@ -98,24 +98,24 @@ const MyCounter = React.forwardRef(Counter)
 
 将 ref 设置到 HTMl 元素上，获取的是对应的 DOM 元素，如 span:
 
-<img src="https://img.imgdb.cn/item/6007a2d13ffa7d37b33d3d83.jpg" width=300/>
+<img src="https://img.imgdb.cn/item/6007a2d13ffa7d37b33d3d83.jpg" width="300"/>
 
 设置到 class 组件上，获取的是 class 组件实例：
 
-<img src="https://img.imgdb.cn/item/6007a34b3ffa7d37b33d75e3.jpg" width=600/>
+<img src="https://img.imgdb.cn/item/6007a34b3ffa7d37b33d75e3.jpg" width="600"/>
 
 设置到函数式组件上的时候，获取的是一个包含可变值或函数的对象，如上例的 Counter 组件：
 
-<img src="https://img.imgdb.cn/item/6007a4c23ffa7d37b33e5e7c.jpg" width=300/>
+<img src="https://img.imgdb.cn/item/6007a4c23ffa7d37b33e5e7c.jpg" width="300"/>
 
 `React.createRef` 和 `useRef `都是创建了一个包含`current`属性的对象，绑定`ref`时，对应的属性和函数都在`current`对应的对象中。
 
 查看对应的`TypeScript`类型，`React.createRef`创建的是`React.RefObject`类型，是**只读**的。
 
-<img src="https://img.imgdb.cn/item/6007a6fc3ffa7d37b33f41de.jpg" width=400/>
+<img src="https://img.imgdb.cn/item/6007a6fc3ffa7d37b33f41de.jpg" width="400"/>
 
 而`useRef`创建的是`React.MutableRefObject`，是**可读写**的。可以保存任何可变的值，使用方式类似于`class`组件的`this`实例变量。（又是和`class`组件对标的一个点）
 
 > <a href="https://zh-hans.reactjs.org/docs/hooks-reference.html#useref">文档</a>描述 useRef 为可以在其`.current`属性中保存一个可变值的“盒子”。
 
-<img src="https://img.imgdb.cn/item/6007a75c3ffa7d37b33f8c60.jpg" width=600/>
+<img src="https://img.imgdb.cn/item/6007a75c3ffa7d37b33f8c60.jpg" width="600"/>

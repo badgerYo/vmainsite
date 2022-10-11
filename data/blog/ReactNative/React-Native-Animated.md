@@ -28,8 +28,10 @@ Animated 　可以创建三种动画类型，直接调用就能创建一个动�
 
 例如：
 
-    // 创建并启动一个 spring 类型的动画
-    Aimated.spring(this.state.value,{...动画配置}).start();
+```javascript
+// 创建并启动一个 spring 类型的动画
+Aimated.spring(this.state.value, { ...动画配置 }).start()
+```
 
 #### _动画值_
 
@@ -40,11 +42,13 @@ Animated 　可以创建三种动画类型，直接调用就能创建一个动�
 
 实例：
 
-    this.state={
-    	dynamicHeight:new Animated.Value(0)  //初始化
-    }
+```javascript
+this.state = {
+  dynamicHeight: new Animated.Value(0), //初始化
+}
 
-    this.state.dynamicHeight.setValue(10);  //重新设定动画值
+this.state.dynamicHeight.setValue(10) //重新设定动画值
+```
 
 #### _计算动画值_
 
@@ -52,9 +56,11 @@ Animated 　可以创建三种动画类型，直接调用就能创建一个动�
 
 例如: 一个长宽比为 3：2 的图片，要实现放大动画，为保持变化过程中的长宽比不变，这时就可以用一个公因数， 则 宽度 = 公因数 乘以 2 ，长度 = 公因数 乘以 3 ，在 state 中变化的动画值就是这个公因数，实际使用的动画值就是通过乘法 Animated.multiply() 得到的动画值。
 
-    // - 宽度计算 -
-    // factor 是 state 中的变量 ，乘以 2 得到真实动画值后再将真实动画值设置到属性或样式上
-    const realAnimatedWidth = Animated.multiply(this.state.factor,new Animated.Value(2));
+```javascript
+// - 宽度计算 -
+// factor 是 state 中的变量 ，乘以 2 得到真实动画值后再将真实动画值设置到属性或样式上
+const realAnimatedWidth = Animated.multiply(this.state.factor, new Animated.Value(2))
+```
 
 可用的计算方法：
 
@@ -76,11 +82,13 @@ Animated 　可以创建三种动画类型，直接调用就能创建一个动�
 
 举例：
 
-    //并行两个动画   同时进行一个 timing 动画和一个 spring 动画
-    Animated.parallel([
-    	Animated.timing(...),
-    	Animated.spring(...)
-    ]).start()
+```javascript
+//并行两个动画   同时进行一个 timing 动画和一个 spring 动画
+Animated.parallel([
+	Animated.timing(...),
+	Animated.spring(...)
+]).start()
+```
 
 #### _插值_
 
@@ -92,23 +100,25 @@ Animated 　可以创建三种动画类型，直接调用就能创建一个动�
 
 例如：
 
-    	// Y 轴上的偏移量根据 fadeAnim 的值变化
-    	// fadeAnim -> [0,1] translateY -> [150,0]
-    	style={{
-    		opacity: this.state.fadeAnim, // Binds directly
-    		transform: [{
-    			translateY: this.state.fadeAnim.interpolate({
-    				inputRange: [0, 1],
-    				outputRange: [150, 0]  // 0 : 150, 0.5 : 75, 1 : 0
-    			}),
-    		}],
-    	}}
+```javascript
+	// Y 轴上的偏移量根据 fadeAnim 的值变化
+	// fadeAnim -> [0,1] translateY -> [150,0]
+	style={{
+		opacity: this.state.fadeAnim, // Binds directly
+		transform: [{
+			translateY: this.state.fadeAnim.interpolate({
+				inputRange: [0, 1],
+				outputRange: [150, 0]  // 0 : 150, 0.5 : 75, 1 : 0
+			}),
+		}],
+	}}
+```
 
-<br>
+<br />
 
 #### _一个完整的简单动画的实现_
 
-<br>
+<br />
 
 一个完整的简单动画可以分如下几步实现
 
@@ -130,51 +140,58 @@ Animated 　可以创建三种动画类型，直接调用就能创建一个动�
 
 通过将 Animated.View 的高度设置成动画值实现。 以上三步均在代码中标出
 
-    export default class AnimatedView extends PureComponent {
-
-      constructor(props) {
-        super(props);
-        this.state = {
-          dynamicHeight: new Animated.Value(0),  //1 - 构造方法中定义 dynamicHeight 动画变量
-        }
-      }
-
-      startViewAnimation = () => {   //2 - 配置动画和定义执行方法
-        let targetHeight = 80;
-        if (this.state.dynamicHeight._value === 80) {     //根据高度判断是否已展开
-          targetHeight = 0;			//已展开的话，则需要将 View 收起，高度回到初始值 0
-        }
-        Animated.spring(			//定义弹性动画
-          this.state.dynamicHeight, //改变的动画变量
-          {
-            toValue: targetHeight,  //目标值，也就是动画值变化后的最终值
-            duration: 300,			//动画持续时长
-          }
-        ).start();
-      }
-
-      render() {
-        return (
-          <View style={{flex: 1}}>
-            <View style={{width: 200, position: 'absolute', top: 30}}>
-              <View>
-                <TouchableOpacity
-                  onPress={this.startViewAnimation}		// 4 - 触发动画执行的点击事件
-                  style={styles.button}>
-                  <Text>点击展开</Text>
-                </TouchableOpacity>
-              </View>
-
-              <Animated.View
-                style={{backgroundColor: '#eee', justifyContent: 'space-around',
-    			height: this.state.dynamicHeight}}	  //3 - 将高度是设为动画值，即用动画值改变 style （height）
-              >
-              </Animated.View>
-            </View>
-          </View>
-        );
-      }
+```javascript
+export default class AnimatedView extends PureComponent {
+  constructor(props) {
+    super(props)
+    this.state = {
+      dynamicHeight: new Animated.Value(0), //1 - 构造方法中定义 dynamicHeight 动画变量
     }
+  }
+
+  startViewAnimation = () => {
+    //2 - 配置动画和定义执行方法
+    let targetHeight = 80
+    if (this.state.dynamicHeight._value === 80) {
+      //根据高度判断是否已展开
+      targetHeight = 0 //已展开的话，则需要将 View 收起，高度回到初始值 0
+    }
+    Animated.spring(
+      //定义弹性动画
+      this.state.dynamicHeight, //改变的动画变量
+      {
+        toValue: targetHeight, //目标值，也就是动画值变化后的最终值
+        duration: 300, //动画持续时长
+      }
+    ).start()
+  }
+
+  render() {
+    return (
+      <View style={{ flex: 1 }}>
+        <View style={{ width: 200, position: 'absolute', top: 30 }}>
+          <View>
+            <TouchableOpacity
+              onPress={this.startViewAnimation} // 4 - 触发动画执行的点击事件
+              style={styles.button}
+            >
+              <Text>点击展开</Text>
+            </TouchableOpacity>
+          </View>
+
+          <Animated.View
+            style={{
+              backgroundColor: '#eee',
+              justifyContent: 'space-around',
+              height: this.state.dynamicHeight,
+            }} //3 - 将高度是设为动画值，即用动画值改变 style （height）
+          ></Animated.View>
+        </View>
+      </View>
+    )
+  }
+}
+```
 
 ##### 案例 2
 
@@ -184,50 +201,49 @@ Animated 　可以创建三种动画类型，直接调用就能创建一个动�
 
 动画值 imageSize 从 0 到 1，映射成对应的实际图片大小，再设置到 Animated.Image 的宽高样式上。
 
-    export default class HeartView extends PureComponent {
-
-      constructor(props) {
-        super(props);
-        this.state = {
-          imageSize: new Animated.Value(0), //动画初始值为 0，目标值为 1 。会经过插值转换后应用到 Animated.Image上
-        }
-      }
-
-      startImageAnimation = () => {
-
-    	//动画开始前先将初始值设为0，否则第一次执行后this.state.imageSize的动画值一直是 1, 不再有效果
-
-        this.state.imageSize.setValue(0)
-        Animated.spring(
-          this.state.imageSize,
-          {
-            toValue: 1,
-            duration: 2000,
-          }
-        ).start();
-      }
-
-      render() {
-
-    	//动画值从0-1，对其进行插值转换 ，映射成实际的图片大小
-    	//再将实际的图片大小设置给 Animated.Image 的样式
-
-        const imageSize = this.state.imageSize.interpolate({
-          inputRange: [0, 0.5, 1],
-          outputRange: [30, 40, 30]
-        });
-        return (
-          <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-            <TouchableOpacity
-              onPress={this.startImageAnimation}
-            >
-              <Animated.Image source={ICON_HEART}
-    						  style={{width: imageSize, height: imageSize,  //应用到 Animated.Image 上
-    					          tintColor: '#dc3132'}}/>
-            </TouchableOpacity>
-          </View>
-        );
-      }
+```javascript
+export default class HeartView extends PureComponent {
+  constructor(props) {
+    super(props)
+    this.state = {
+      imageSize: new Animated.Value(0), //动画初始值为 0，目标值为 1 。会经过插值转换后应用到 Animated.Image上
     }
+  }
+
+  startImageAnimation = () => {
+    //动画开始前先将初始值设为0，否则第一次执行后this.state.imageSize的动画值一直是 1, 不再有效果
+
+    this.state.imageSize.setValue(0)
+    Animated.spring(this.state.imageSize, {
+      toValue: 1,
+      duration: 2000,
+    }).start()
+  }
+
+  render() {
+    //动画值从0-1，对其进行插值转换 ，映射成实际的图片大小
+    //再将实际的图片大小设置给 Animated.Image 的样式
+
+    const imageSize = this.state.imageSize.interpolate({
+      inputRange: [0, 0.5, 1],
+      outputRange: [30, 40, 30],
+    })
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <TouchableOpacity onPress={this.startImageAnimation}>
+          <Animated.Image
+            source={ICON_HEART}
+            style={{
+              width: imageSize,
+              height: imageSize, //应用到 Animated.Image 上
+              tintColor: '#dc3132',
+            }}
+          />
+        </TouchableOpacity>
+      </View>
+    )
+  }
+}
+```
 
 这些都是动画 Animated 的基础使用，另外动画部分还有关于 setNativeProps 和 LayoutAnimation 的部分另做总结。

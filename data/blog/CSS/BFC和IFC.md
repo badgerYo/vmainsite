@@ -25,8 +25,7 @@ BFC 是一块渲染区域，有一套渲染定位规则。决定子元素定位�
 
 其实也不是什么新鲜东西，可能都在用但不知道这个概念。
 
-<hr/>
-
+<hr />
 ### 案例 1:使浮动元素和周围内容等高
 
 对于以下代码：
@@ -58,7 +57,7 @@ BFC 是一块渲染区域，有一套渲染定位规则。决定子元素定位�
 
 显示的效果如下：
 
-<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210409170242.png" width=600/>
+<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210409170242.png" width="600"/>
 
 因为浮动盒子脱离了文档流。浮动的 div 元素更大，就穿出了边框。
 
@@ -77,7 +76,6 @@ BFC 是一块渲染区域，有一套渲染定位规则。决定子元素定位�
 但是如果只是用来创建 BFC 的话，可能引发其他情况。
 
 <hr/>
-
 ### 案例 2: 清除外部浮动
 
 对于以下代码：
@@ -125,7 +123,7 @@ BFC 是一块渲染区域，有一套渲染定位规则。决定子元素定位�
 
 这里需要关注的是`float`元素上的`margin-right`这个属性。
 
-<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210409173355.png" width=600/>
+<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210409173355.png" width="600"/>
 
 上面的两个元素之间，margin-right 没有生效。但是对`box`添加`display:flow-root`属性之后，margin-right 属性就生效了，左边的元素缩放的时候始终都保持有`25px`的距离。也就是 **`display:flow-root`对同级的外部元素的浮动也清除了**。
 
@@ -149,12 +147,11 @@ BFC 是一块渲染区域，有一套渲染定位规则。决定子元素定位�
 
 消除同级元素的 float, 显示出 margin-right 的效果就更明显了。
 
-<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210409174024.png" width=600/>
+<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210409174024.png" width="600"/>
 
 > 需要注意的是：清除同一 BFC 中的浮动，只能清除在它前面元素的浮动。
 
 <hr />
-
 ### 案例 3: 外边距塌陷问题
 
 对于如下代码：
@@ -185,18 +182,17 @@ BFC 是一块渲染区域，有一套渲染定位规则。决定子元素定位�
 
 显示的效果如下：
 
-<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210409175508.png" width=600/>
+<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210409175508.png" width="600"/>
 
 可以看到，对 red-inner 的 margin 没法撑起盒子，两个蓝色盒子之间的距离是 50px.
 
 使用`display: flow-root;`
 
-<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210409175801.png" width=600/>
+<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210409175801.png" width="600"/>
 
 两个蓝色盒子就距离 100px 了，而且`margin`也完全显示了出来。
 
 <hr/>
-
 ## 创建 BFC 的方法
 
 使用这些 BFC 的特性，需要创建出 BFC：
@@ -217,7 +213,6 @@ BFC 是一块渲染区域，有一套渲染定位规则。决定子元素定位�
 - `column-span` 为 `all` 的元素始终会创建一个新的 BFC，即使该元素没有包裹在一个多列容器中（[标准变更](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51)，[Chrome bug](https://bugs.chromium.org/p/chromium/issues/detail?id=709362)）
 
 <hr/>
-
 ## 什么又是 IFC？
 
 相对于块级格式化上下文，还有行内格式化上下文，**Inline formatting context**。
@@ -261,11 +256,11 @@ Margin，border 和 padding 的设置在行方向上生效。
 
 拉小浏览器窗口，显示效果：
 
-<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210410001539.png" width=600/>
+<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210410001539.png" width="600"/>
 
 **而如果将`vertical-align: bottom`设置为`top`，效果则是顶部对齐**：
 
-<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210410001818.png" width=600/>
+<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210410001818.png" width="600"/>
 
 > 需要注意的是，如果文字方向是垂直书写模式的话，对齐方式不变，但实际上应该是左右对齐，与 vertical-align 的字面意思稍有出入。在`vertical-align:top`再加上`writing-mode: vertical-rl`。
 >
@@ -295,10 +290,9 @@ Margin，border 和 padding 的设置在行方向上生效。
 
 显示效果：
 
-<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210410002858.png" width=600/>
+<img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210410002858.png" width="600"/>
 
 <hr/>
-
 参考：
 
 - https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context#exclude_external_floats

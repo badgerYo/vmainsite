@@ -1,5 +1,5 @@
 ---
-name: Vxx
+name: badgerYo
 avatar: /main/static/images/avatar.png
 occupation: Professor of Atmospheric Science
 company: Stanford University

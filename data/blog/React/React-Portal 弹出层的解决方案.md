@@ -2,7 +2,7 @@
 title: React Portal - 弹出层的优秀解决方案
 date: '2021-02-12'
 tags: ['React']
-summary: ''
+summary: 'Portal - React 的一个组件传送门'
 ---
 
 对于需要使用弹出层的需求 ，`Portal`可以说是提供了一种完美的解决方案。相比于`React Native`中的实现更多的使用`Modal`或者绝对定位，`Portal`实在是简易友好得多。

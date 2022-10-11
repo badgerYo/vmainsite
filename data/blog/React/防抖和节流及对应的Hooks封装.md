@@ -2,7 +2,7 @@
 title: 防抖和节流及对应React Hooks封装
 date: '2021-02-22'
 tags: ['JavaScript', 'React']
-summary: Example of a markdown file with code blocks and syntax highlighting
+summary: 防抖和节流总结一下，再配合 ReactHook 封装试试
 ---
 
 ## Debounce

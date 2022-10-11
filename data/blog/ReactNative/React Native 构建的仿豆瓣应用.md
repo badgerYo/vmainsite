@@ -2,7 +2,7 @@
 title: React Native 构建的仿豆瓣应用
 date: '2020-05-24'
 tags: ['ReactNative']
-summary: ''
+summary: 2020年写的一个 React Native 应用，简单但完整的练手 demo。包含常见的 React Native 库，网络，状态管理，主题...麻雀虽小五脏俱全
 ---
 
 介绍一个用 React Native 创建的应用，集合了豆瓣电影，图书等信息展示功能的 app。（React Native 学习 demo 应用）

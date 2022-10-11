@@ -2,7 +2,7 @@
 title: 常用CSS收录
 date: '2022-04-07'
 tags: ['CSS']
-summary: 常用CSS备忘：滚动条样式、文本超出、placeholder...
+summary: 滚动条样式、单行多行文本超出、placeholder颜色，绝对定位点击...
 ---
 
 ### 去除滚动条样式

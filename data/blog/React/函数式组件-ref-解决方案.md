@@ -2,7 +2,7 @@
 title: 函数式组件 ref 解决方案
 date: '2021-02-12'
 tags: ['React']
-summary: ''
+summary: 在 class 组件中可以创建 ref 进行实例方法调用，函数式组件也能这么玩吗？
 ---
 
 对于 React 中需要强制修改子组件的情况，React 提供了 Refs 这种解决办法，使得我们可以操作底层 DOM 元素或者自定的 class 组件实例。除此之外，文档（v17.0.1）对函数式组件另有描述:

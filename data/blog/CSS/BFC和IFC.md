@@ -2,7 +2,7 @@
 title: 经常问到的 BFC 和 IFC 是什么
 date: '2021-04-10'
 tags: ['CSS']
-summary: 对 CSS 中 BFC 和 IFC 的概念总结和场景例证
+summary: CSS 中 BFC 和 IFC 这些概念具体是什么，有什么特征和作用？一些总结和场景例子
 ---
 
 > <a href= "https://github.com/lexguy/Summary/tree/main/css/BFC%26IFC">Demo  文件（github）</a>

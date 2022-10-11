@@ -2,7 +2,7 @@
 title: React Native Animated
 date: '2020-01-13'
 tags: ['ReactNative']
-summary: ''
+summary: 对 React Native 中动画的 API 的熟悉，写的一些例子
 ---
 
 如果要在一个 React Native 应用中添加动画效果，首先考虑的就是官方提供的 Animated 。通过定义输入和输出的动画状态值，调用 start/stop 方法就可以执行起来，使用上可以说是非常友好方便。

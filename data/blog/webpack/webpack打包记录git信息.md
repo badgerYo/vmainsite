@@ -2,7 +2,7 @@
 title: Webpack 打包记录 git commit 信息
 date: '2021-06-19'
 tags: ['Webpack']
-summary: ''
+summary: '打包的时候执行 git 命令, 获取到当前版本的 git commit hash, 将该 hash 写到文件名里，奇怪的 js 版本的查看方法又增加了'
 ---
 
 ## 场景

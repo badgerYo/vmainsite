@@ -264,7 +264,7 @@ Margin，border 和 padding 的设置在行方向上生效。
 
 > 需要注意的是，如果文字方向是垂直书写模式的话，对齐方式不变，但实际上应该是左右对齐，与 vertical-align 的字面意思稍有出入。在`vertical-align:top`再加上`writing-mode: vertical-rl`。
 >
-> <img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210410002037.png" style="width:80px"/>
+> <img src="https://christop.oss-cn-guangzhou.aliyuncs.com/gragonfly/20210410002037.png" width="80"/>
 
 ### 水平方向上对齐
 

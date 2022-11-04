@@ -1,7 +1,7 @@
 ---
 title: React Native Animated
 date: '2020-01-13'
-tags: ['ReactNative']
+tags: ['React Native']
 summary: 对 React Native 中动画的 API 的熟悉，写的一些例子
 ---
 

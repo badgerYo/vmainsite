@@ -24,9 +24,7 @@ summary: 'giscus是一个由 github discussion 驱动的站点评论插件, 不�
 
 ### 创建页面元素
 
-到配置生成的网址(https://giscus.app/zh-CN) 上填入自己仓库以及 Discussion 相关的信息，就会生成获得一段 `script`代码
-
-启用`giscus`只需要在需要出现的位置下添加获取的`script`标签，其中包含了仓库 id 和 discussion 的分类 id, 然后评论就会被放置在该位置。
+到配置生成的网址(https://giscus.app/zh-CN) 上填入自己仓库以及 Discussion 相关的信息，就会生成获得一段 `script`代码。然后启用`giscus`只需要在需要出现的位置下添加获取的`script`代码，其中包含了仓库 id 和 discussion 的分类 id, 然后评论就会被放置在该位置。
 
 ```html
 <script

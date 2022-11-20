@@ -2,7 +2,7 @@
 title: git 命令备忘
 date: '2022-09-07'
 tags: ['dev', 'git']
-summary: git 操作记录, tag、remote...
+summary: git 操作记录, 实用又常忘的命令~, 有如 tag、remote...
 ---
 
 ## 标签

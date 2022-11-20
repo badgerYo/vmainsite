@@ -9,6 +9,8 @@ summary: CSS 中 BFC 和 IFC 这些概念具体是什么，有什么特征和作
 >
 > <a href="https://codepen.io/Kent_Terminal/project/editor/ARQJRx">Demo 实时预览（codePen）</a>
 
+<TOCInline toc={props.toc} asDisclosure />
+
 ## 什么是 BFC？什么作用？
 
 **Block Formatting Context**

@@ -16,9 +16,10 @@ const discussUrl = (slug) =>
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
-export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
+export default function PostLayout({ frontMatter, authorDetails, next, prev, children, toc }) {
   const { slug, fileName, date, title, images, tags } = frontMatter
-
+  // TODO
+  console.info('[xxxx toc]', toc)
   return (
     <SectionContainer>
       <BlogSEO

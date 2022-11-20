@@ -30,9 +30,7 @@ webpack 插件： <a href="https://github.com/pirelenito/git-revision-webpack-pl
 
 因为我们可以在 webpack 打包之前执行一段 node, 而且 git 管理的信息都在.git 文件夹中，其中的文件目录如下，那么就有了操作空间：使用 node 读取 .git 中的文件，这样自然就能获取到想要的内容。但是对其中的详细内容，git 信息记录的格式并没有进行深一层的研究，并不确定是否是易执行的方式，暂时搁置。
 
-> 此处可深入点，.git 文件夹的结构和文件记录格式。
->
-> git 文档链接：<a href="https://git-scm.com/book/zh/v2">https://git-scm.com/book/zh/v2</a>
+> .git 文件夹的结构和文件记录格式参见 git 文档链接：https://git-scm.com/book/zh/v2
 
 ### 3. node 执行 git 命令获取信息
 

@@ -1,5 +1,5 @@
 ---
-title: 经常问到的 BFC 和 IFC 是什么
+title: CSS 中的 BFC 和 IFC
 date: '2021-04-10'
 tags: ['CSS']
 summary: CSS 中 BFC 和 IFC 这些概念具体是什么，有什么特征和作用？一些总结和场景例子
